@@ -621,11 +621,13 @@ var frequencyMap = function(array){
  */
 var tupleConvertToObject = function(tupleArray){ // [['a',1],['b',2],['c',3]]
 var object = {};
-for(var i = 0; i < array.length; i++){
-  object[array[i]] = array[i].length;
-}
+tupleArray.forEach(function(objData){
+object[objData[0]] = objData[1];
+});
 return object;
-} 
+};
+// for(var i =0; i < tupleArray.length; i++){
+// for(var i = 0; i < tupleArray[i].length; i++){
 // {
 //   'a': 1,
 //   'b': 2,
